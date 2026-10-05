@@ -12,10 +12,21 @@ class RaceTimerPage(QMainWindow):
         uic.loadUi("features/raceTimerFrontPage/raceTimerUi.ui",self)
 
         background_image_path = os.path.join(
-            os.path.dirname(__file__), "..", "..", "background", "FirstBackground.png")
+            os.path.dirname(__file__), "..", "..", "background", "SecondBackground.png")
         
         background_image_path = os.path.abspath(background_image_path)  
         background_image_path = background_image_path.replace( "\\", "/")
+
+        self.setObjectName(
+            "raceTimerPagebg"
+            )
+        
+        self.setStyleSheet(f"""
+        QWidget#raceTimerPagebg {{
+            border-image: url("{background_image_path}")
+            1 0 0 0 stretch stretch;
+        }}
+        """)
         
         self.database = Database()
         self.timer = QTimer(self)
@@ -59,7 +70,7 @@ class RaceTimerPage(QMainWindow):
             self.timer.stop()
 
             self.is_paused = False
-            self.timerLabel.setStyleSheet("color: #F0AD4E;")
+            self.timerLabel.setStyleSheet("color: #E63946;")
 
     def pauseTimer(self):
         if self.timer.isActive():
@@ -67,7 +78,7 @@ class RaceTimerPage(QMainWindow):
             self.timer.stop()
 
             self.is_paused = True
-            self.timerLabel.setStyleSheet("color: #1E73BE;")
+            self.timerLabel.setStyleSheet("color: #F0AD4E;")
 
     def findParticipant(self):
         race_number = self.raceNumberLineedit.text().strip()
@@ -115,13 +126,6 @@ class RaceTimerPage(QMainWindow):
                 f"Race Number {race_number} has already been recorded."
             )
             return
-
-        print("Race Result Recorded:")
-        print("Race Number:", race_number)
-        print("Name:", name)
-        print("Category:", category)
-        print("Distance:", distance)
-        print("Race Time:", race_time)
 
         self.raceNumberLineedit.clear()
         self.fullNameLineEdit.clear()

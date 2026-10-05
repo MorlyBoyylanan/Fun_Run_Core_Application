@@ -30,9 +30,7 @@ class RegistrationPage(QMainWindow):
         background_image_path = background_image_path.replace( "\\", "/")
 
         # Give the main widget an object name
-        self.setObjectName(
-            "MainRegistrationPage"
-        )
+        self.setObjectName("MainRegistrationPage")
 
         self.setStyleSheet(f"""
         QWidget#MainRegistrationPage {{
@@ -278,19 +276,11 @@ class RegistrationPage(QMainWindow):
 
         except ValueError as error:
 
-            QMessageBox.warning(
-                self,
-                "Input Error",
-                str(error)
-            )
+            QMessageBox.warning(self, "Input Error", str(error))
 
         except Exception as error:
 
-            QMessageBox.critical(
-                self,
-                "Update Error",
-                f"Unable to update participant:\n{error}"
-            )
+            QMessageBox.critical(self, "Update Error", f"Unable to update participant:\n{error}")
 
     # Function to delete a participant
     def deleteBtn(self):
@@ -299,11 +289,7 @@ class RegistrationPage(QMainWindow):
 
         if selected_row < 0:
 
-            QMessageBox.warning(
-                self,
-                "No Selection",
-                "Please select a participant to delete."
-            )
+            QMessageBox.warning(self, "No Selection", "Please select a participant to delete.")
 
             return
 
@@ -339,10 +325,7 @@ class RegistrationPage(QMainWindow):
 
         if not search_txt:
 
-            QMessageBox.warning(
-                self,
-                "Input Error",
-                "Please enter a race number or name to search.")
+            QMessageBox.warning(self, "Input Error", "Please enter a race number or name to search.")
             return
 
         found = False

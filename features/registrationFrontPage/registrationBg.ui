@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>850</width>
-    <height>480</height>
+    <height>490</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -108,20 +108,20 @@
                 <widget class="QLabel" name="label_12">
                  <property name="minimumSize">
                   <size>
-                   <width>300</width>
-                   <height>30</height>
+                   <width>500</width>
+                   <height>40</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>300</width>
-                   <height>30</height>
+                   <width>900</width>
+                   <height>50</height>
                   </size>
                  </property>
                  <property name="font">
                   <font>
                    <family>Arial Black</family>
-                   <pointsize>7</pointsize>
+                   <pointsize>12</pointsize>
                    <weight>75</weight>
                    <bold>true</bold>
                   </font>
@@ -170,7 +170,7 @@
                      <property name="font">
                       <font>
                        <family>Arial</family>
-                       <pointsize>14</pointsize>
+                       <pointsize>12</pointsize>
                        <weight>75</weight>
                        <bold>true</bold>
                       </font>
@@ -181,7 +181,6 @@
     color: #123B78;
     border: none;
     font-family: Arial;
-    font-size: 14px;
     font-weight: bold;
 }</string>
                      </property>
@@ -192,6 +191,18 @@
                    </item>
                    <item row="0" column="1">
                     <widget class="QLineEdit" name="fullnametxt">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Arial</family>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
                      <property name="styleSheet">
                       <string notr="true">QLineEdit {
     background-color: #FFFFFF;
@@ -218,13 +229,20 @@ QLineEdit:focus {
                   <layout class="QFormLayout" name="formLayout_9">
                    <item row="0" column="0">
                     <widget class="QLabel" name="label_2">
+                     <property name="font">
+                      <font>
+                       <family>Arial</family>
+                       <pointsize>12</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
                      <property name="styleSheet">
                       <string notr="true">QLabel {
     background-color: transparent;
     color: #123B78;
     border: none;
     font-family: Arial;
-    font-size: 14px;
     font-weight: bold;
 }</string>
                      </property>
@@ -238,7 +256,7 @@ QLineEdit:focus {
                      <property name="minimumSize">
                       <size>
                        <width>30</width>
-                       <height>0</height>
+                       <height>30</height>
                       </size>
                      </property>
                      <property name="maximumSize">
@@ -246,6 +264,12 @@ QLineEdit:focus {
                        <width>50</width>
                        <height>16777215</height>
                       </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Arial</family>
+                       <pointsize>10</pointsize>
+                      </font>
                      </property>
                      <property name="styleSheet">
                       <string notr="true">QLineEdit {
@@ -273,13 +297,20 @@ QLineEdit:focus {
                   <layout class="QFormLayout" name="formLayout_8">
                    <item row="0" column="0">
                     <widget class="QLabel" name="label_3">
+                     <property name="font">
+                      <font>
+                       <family>Arial</family>
+                       <pointsize>12</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
                      <property name="styleSheet">
                       <string notr="true">QLabel {
     background-color: transparent;
     color: #123B78;
     border: none;
     font-family: Arial;
-    font-size: 14px;
     font-weight: bold;
 }</string>
                      </property>
@@ -293,8 +324,14 @@ QLineEdit:focus {
                      <property name="minimumSize">
                       <size>
                        <width>70</width>
-                       <height>0</height>
+                       <height>30</height>
                       </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Arial</family>
+                       <pointsize>10</pointsize>
+                      </font>
                      </property>
                      <property name="styleSheet">
                       <string notr="true">  	background-color: #FFFFFF;
@@ -332,13 +369,20 @@ QLineEdit:focus {
                   <layout class="QFormLayout" name="formLayout_7">
                    <item row="0" column="0">
                     <widget class="QLabel" name="birthdatelabel">
+                     <property name="font">
+                      <font>
+                       <family>Arial</family>
+                       <pointsize>12</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
                      <property name="styleSheet">
                       <string notr="true">QLabel {
     background-color: transparent;
     color: #123B78;
     border: none;
     font-family: Arial;
-    font-size: 14px;
     font-weight: bold;
 }</string>
                      </property>
@@ -349,6 +393,12 @@ QLineEdit:focus {
                    </item>
                    <item row="0" column="1">
                     <widget class="QDateEdit" name="birthdateEdit">
+                     <property name="font">
+                      <font>
+                       <family>Arial</family>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
                      <property name="styleSheet">
                       <string notr="true">QDateEdit {
     background-color: #FFFFFF;
@@ -385,13 +435,20 @@ QDateEdit::down-arrow {
                   <layout class="QFormLayout" name="formLayout_6">
                    <item row="0" column="0">
                     <widget class="QLabel" name="label_5">
+                     <property name="font">
+                      <font>
+                       <family>Arial</family>
+                       <pointsize>12</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
                      <property name="styleSheet">
                       <string notr="true">QLabel {
     background-color: transparent;
     color: #123B78;
     border: none;
     font-family: Arial;
-    font-size: 14px;
     font-weight: bold;
 }</string>
                      </property>
@@ -402,6 +459,18 @@ QDateEdit::down-arrow {
                    </item>
                    <item row="0" column="1">
                     <widget class="QLineEdit" name="emailtxt">
+                     <property name="minimumSize">
+                      <size>
+                       <width>200</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Arial</family>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
                      <property name="styleSheet">
                       <string notr="true">QLineEdit {
     background-color: #FFFFFF;
@@ -428,13 +497,20 @@ QLineEdit:focus {
                   <layout class="QFormLayout" name="formLayout_5">
                    <item row="0" column="0">
                     <widget class="QLabel" name="label_6">
+                     <property name="font">
+                      <font>
+                       <family>Arial</family>
+                       <pointsize>12</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
                      <property name="styleSheet">
                       <string notr="true">QLabel {
     background-color: transparent;
     color: #123B78;
     border: none;
     font-family: Arial;
-    font-size: 14px;
     font-weight: bold;
 }</string>
                      </property>
@@ -447,8 +523,8 @@ QLineEdit:focus {
                     <widget class="QLineEdit" name="cptxt">
                      <property name="minimumSize">
                       <size>
-                       <width>120</width>
-                       <height>0</height>
+                       <width>130</width>
+                       <height>30</height>
                       </size>
                      </property>
                      <property name="maximumSize">
@@ -456,6 +532,12 @@ QLineEdit:focus {
                        <width>150</width>
                        <height>16777215</height>
                       </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Arial</family>
+                       <pointsize>10</pointsize>
+                      </font>
                      </property>
                      <property name="styleSheet">
                       <string notr="true">QLineEdit {
@@ -485,13 +567,20 @@ QLineEdit:focus {
                 <layout class="QHBoxLayout" name="horizontalLayout_4">
                  <item>
                   <widget class="QLabel" name="label_15">
+                   <property name="font">
+                    <font>
+                     <family>Arial</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
                    <property name="styleSheet">
                     <string notr="true">QLabel {
     background-color: transparent;
     color: #123B78;
     border: none;
     font-family: Arial;
-    font-size: 14px;
     font-weight: bold;
 }</string>
                    </property>
@@ -502,6 +591,18 @@ QLineEdit:focus {
                  </item>
                  <item>
                   <widget class="QLineEdit" name="addresstxt">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
                    <property name="styleSheet">
                     <string notr="true">QLineEdit {
     background-color: #FFFFFF;
@@ -530,13 +631,20 @@ QLineEdit:focus {
                   <layout class="QFormLayout" name="formLayout_3">
                    <item row="0" column="0">
                     <widget class="QLabel" name="label_16">
+                     <property name="font">
+                      <font>
+                       <family>Arial</family>
+                       <pointsize>12</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
                      <property name="styleSheet">
                       <string notr="true">QLabel {
     background-color: transparent;
     color: #123B78;
     border: none;
     font-family: Arial;
-    font-size: 14px;
     font-weight: bold;
 }</string>
                      </property>
@@ -550,8 +658,14 @@ QLineEdit:focus {
                      <property name="minimumSize">
                       <size>
                        <width>100</width>
-                       <height>0</height>
+                       <height>30</height>
                       </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Arial</family>
+                       <pointsize>10</pointsize>
+                      </font>
                      </property>
                      <property name="styleSheet">
                       <string notr="true">QComboBox {
@@ -580,12 +694,12 @@ QComboBox QAbstractItemView {
                      </property>
                      <item>
                       <property name="text">
-                       <string>Open Senior Citizen Women</string>
+                       <string>Senior Citizen Women</string>
                       </property>
                      </item>
                      <item>
                       <property name="text">
-                       <string>Open Senior Citizen Men</string>
+                       <string>Senior Citizen Men</string>
                       </property>
                      </item>
                      <item>
@@ -606,13 +720,20 @@ QComboBox QAbstractItemView {
                   <layout class="QFormLayout" name="formLayout_2">
                    <item row="0" column="0">
                     <widget class="QLabel" name="label_18">
+                     <property name="font">
+                      <font>
+                       <family>Arial</family>
+                       <pointsize>12</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
                      <property name="styleSheet">
                       <string notr="true">QLabel {
     background-color: transparent;
     color: #123B78;
     border: none;
     font-family: Arial;
-    font-size: 14px;
     font-weight: bold;
 }</string>
                      </property>
@@ -625,8 +746,8 @@ QComboBox QAbstractItemView {
                     <widget class="QComboBox" name="distancecomboBox">
                      <property name="minimumSize">
                       <size>
-                       <width>20</width>
-                       <height>0</height>
+                       <width>30</width>
+                       <height>30</height>
                       </size>
                      </property>
                      <property name="maximumSize">
@@ -634,6 +755,12 @@ QComboBox QAbstractItemView {
                        <width>100</width>
                        <height>16777215</height>
                       </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Arial</family>
+                       <pointsize>10</pointsize>
+                      </font>
                      </property>
                      <property name="styleSheet">
                       <string notr="true">QComboBox {
@@ -693,13 +820,20 @@ QComboBox QAbstractItemView {
                   <layout class="QFormLayout" name="formLayout">
                    <item row="0" column="0">
                     <widget class="QLabel" name="label_19">
+                     <property name="font">
+                      <font>
+                       <family>Arial</family>
+                       <pointsize>12</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
                      <property name="styleSheet">
                       <string notr="true">QLabel {
     background-color: transparent;
     color: #123B78;
     border: none;
     font-family: Arial;
-    font-size: 14px;
     font-weight: bold;
 }</string>
                      </property>
@@ -713,7 +847,7 @@ QComboBox QAbstractItemView {
                      <property name="minimumSize">
                       <size>
                        <width>70</width>
-                       <height>0</height>
+                       <height>30</height>
                       </size>
                      </property>
                      <property name="maximumSize">
@@ -721,6 +855,12 @@ QComboBox QAbstractItemView {
                        <width>100</width>
                        <height>16777215</height>
                       </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Arial</family>
+                       <pointsize>10</pointsize>
+                      </font>
                      </property>
                      <property name="styleSheet">
                       <string notr="true">QLineEdit {
@@ -765,9 +905,17 @@ QLineEdit:focus {
                   <widget class="QPushButton" name="registerButton">
                    <property name="minimumSize">
                     <size>
-                     <width>80</width>
-                     <height>0</height>
+                     <width>100</width>
+                     <height>50</height>
                     </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QPushButton {
@@ -777,7 +925,7 @@ QLineEdit:focus {
     border-radius: 10px;
     padding: 6px 15px;
     font-family: Arial;
-    font-size: 14px;
+
     font-weight: bold;
 }
 
@@ -799,9 +947,17 @@ QPushButton:pressed {
                   <widget class="QPushButton" name="cancelButton">
                    <property name="minimumSize">
                     <size>
-                     <width>80</width>
-                     <height>0</height>
+                     <width>100</width>
+                     <height>50</height>
                     </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QPushButton {
@@ -811,7 +967,6 @@ QPushButton:pressed {
     border-radius: 10px;
     padding: 6px 15px;
     font-family: Arial;
-    font-size: 14px;
     font-weight: bold;
 }
 
@@ -837,9 +992,17 @@ QPushButton:pressed {
                   <widget class="QPushButton" name="updateButton">
                    <property name="minimumSize">
                     <size>
-                     <width>80</width>
-                     <height>0</height>
+                     <width>100</width>
+                     <height>50</height>
                     </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QPushButton {
@@ -849,7 +1012,6 @@ QPushButton:pressed {
     border-radius: 10px;
     padding: 6px 15px;
     font-family: Arial;
-    font-size: 14px;
     font-weight: bold;
 }
 
@@ -871,9 +1033,17 @@ QPushButton:pressed {
                   <widget class="QPushButton" name="deleteButton">
                    <property name="minimumSize">
                     <size>
-                     <width>80</width>
-                     <height>0</height>
+                     <width>100</width>
+                     <height>50</height>
                     </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QPushButton {
@@ -883,7 +1053,6 @@ QPushButton:pressed {
     border-radius: 10px;
     padding: 6px 15px;
     font-family: Arial;
-    font-size: 14px;
     font-weight: bold;
 }
 
@@ -905,9 +1074,17 @@ QPushButton:pressed {
                   <widget class="QPushButton" name="clearButton">
                    <property name="minimumSize">
                     <size>
-                     <width>80</width>
-                     <height>0</height>
+                     <width>100</width>
+                     <height>50</height>
                     </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QPushButton {
@@ -917,7 +1094,6 @@ QPushButton:pressed {
     border-radius: 10px;
     padding: 6px 15px;
     font-family: Arial;
-    font-size: 14px;
     font-weight: bold;
 }
 
@@ -1026,6 +1202,12 @@ QPushButton:pressed {
                </property>
                <item row="0" column="0">
                 <widget class="QLabel" name="label_7">
+                 <property name="minimumSize">
+                  <size>
+                   <width>60</width>
+                   <height>30</height>
+                  </size>
+                 </property>
                  <property name="styleSheet">
                   <string notr="true">QLabel {
     background-color: transparent;
@@ -1047,8 +1229,14 @@ QPushButton:pressed {
                  <property name="minimumSize">
                   <size>
                    <width>120</width>
-                   <height>0</height>
+                   <height>42</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Arial</family>
+                   <pointsize>12</pointsize>
+                  </font>
                  </property>
                  <property name="styleSheet">
                   <string notr="true">QLineEdit {
@@ -1059,7 +1247,7 @@ QPushButton:pressed {
     padding-left: 12px;
     padding-right: 12px;
     font-family: Arial;
-    font-size: 14px;
+
 }
 
 QLineEdit:hover {
@@ -1081,9 +1269,17 @@ QLineEdit:focus {
               <widget class="QPushButton" name="searchButton">
                <property name="minimumSize">
                 <size>
-                 <width>80</width>
-                 <height>0</height>
+                 <width>100</width>
+                 <height>30</height>
                 </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Arial</family>
+                 <pointsize>12</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
                </property>
                <property name="styleSheet">
                 <string notr="true">QPushButton {
@@ -1093,7 +1289,6 @@ QLineEdit:focus {
     border-radius: 10px;
     padding: 6px 15px;
     font-family: Arial;
-    font-size: 14px;
     font-weight: bold;
 }
 
@@ -1151,6 +1346,12 @@ QPushButton:pressed {
           <height>16777215</height>
          </size>
         </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
         <property name="styleSheet">
          <string notr="true">QTableWidget {
     background-color: #FFFFFF;
@@ -1159,7 +1360,7 @@ QPushButton:pressed {
     border-radius: 8px;
     gridline-color: #B8C7DC;
     font-family: Arial;
-    font-size: 14px;
+
 }
 
 QTableWidget::item {
@@ -1177,7 +1378,6 @@ QHeaderView::section {
     border: none;
     padding: 6px;
     font-family: Arial;
-    font-size: 14px;
     font-weight: bold;
 }</string>
         </property>

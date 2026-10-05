@@ -49,6 +49,22 @@ class Database:
                 )
                 """
             )
+            
+            connection.execute(
+                """
+                CREATE TABLE IF NOT EXISTS singlet_records (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    race_number TEXT,
+                    name TEXT NOT NULL,
+                    category TEXT,
+                    distance TEXT,
+                    cpnumber TEXT,
+                    singlet_size TEXT NOT NULL,
+                    singlet_status TEXT NOT NULL,
+                    payment_status TEXT NOT NULL
+                )
+                """
+            )
 
     def get_participant_by_race_number(self, race_number):
         with self.connect() as connection:
@@ -85,6 +101,40 @@ class Database:
                 VALUES (?, ?, ?, ?, ?)
                 """,
                 (race_number, name, category, distance, race_time)
+            )
+
+            return True
+
+    def delete_race_result(self, race_number):
+        with self.connect() as connection:
+            connection.execute(
+                """
+                DELETE FROM race_results
+                WHERE race_number = ?
+                """,
+                (race_number,)
+            )
+            return True
+    def update_race_result(self, race_number, name, category, distance, race_time):
+    
+        with self.connect() as connection:
+            connection.execute(
+                """
+                UPDATE race_results
+                SET
+                    name = ?,
+                    category = ?,
+                    distance = ?,
+                    race_time = ?
+                WHERE race_number = ?
+                """,
+                (
+                    name,
+                    category,
+                    distance,
+                    race_time,
+                    race_number
+                )
             )
 
             return True
