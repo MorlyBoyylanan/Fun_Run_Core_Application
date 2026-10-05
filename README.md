@@ -2,7 +2,9 @@
 
 ## Project Title
 
-**FUN RUN CORE APPLICATION SYSTEM**
+# FUN RUN CORE APPLICATION SYSTEM
+
+**FUN RUN CORE APPLICATION SYSTEM — A Desktop Application for Managing Fun Run Participants, Race Results, and Singlet Records Using PyQt5 and SQLite.**
 
 ## Project Description
 
