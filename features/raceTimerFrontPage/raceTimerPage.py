@@ -103,14 +103,69 @@ class RaceTimerPage(QMainWindow):
             self.distanceLineEdit.clear()
                 
 
+    
     def recordResult(self):
-        race_number = self.raceNumberLineedit.text().strip()
-        name = self.fullNameLineEdit.text().strip()
-        category = self.categoryLineEdit.text().strip()
-        distance = self.distanceLineEdit.text().strip()
+        import re
 
+        race_number = self.raceNumberLineedit.text().strip()
+
+        # Check if race number is empty
+        if not race_number:
+            QMessageBox.warning(
+                self,
+                "Missing Race Number",
+                "Please enter a race number."
+            )
+            return
+
+        # Check the correct race number format: 4 digits
+        if not re.fullmatch(r"\d{4}", race_number):
+            QMessageBox.warning(
+                self,
+                "Invalid Race Number",
+                "Race number must contain exactly 4 digits (example: 0001)."
+            )
+            return
+
+        # Check if race number exists in Registration Page
+        participant = self.database.get_participant_by_race_number(
+            race_number
+        )
+
+        if not participant:
+            QMessageBox.warning(
+                self,
+                "Participant Not Found",
+                "This race number is not registered. No result was saved."
+            )
+            return
+
+        # Get participant information from the database
+        name, category, distance = participant
+
+        # Check if a race result already exists
+        with self.database.connect() as connection:
+            existing = connection.execute(
+                """
+                SELECT id
+                FROM race_results
+                WHERE race_number = ?
+                """,
+                (race_number,)
+            ).fetchone()
+
+        if existing:
+            QMessageBox.warning(
+                self,
+                "Already Recorded",
+                f"Race number {race_number} has already been recorded."
+            )
+            return
+
+        # Get the timer display
         race_time = self.timerLabel.text()
 
+        # Save the race result
         success = self.database.save_race_result(
             race_number,
             name,
@@ -123,10 +178,22 @@ class RaceTimerPage(QMainWindow):
             QMessageBox.warning(
                 self,
                 "Already Recorded",
-                f"Race Number {race_number} has already been recorded."
+                f"Race number {race_number} has already been recorded."
             )
             return
 
+        QMessageBox.information(
+            self,
+            "Record Successful",
+            f"Race result recorded successfully!\n\n"
+            f"Race Number: {race_number}\n"
+            f"Name: {name}\n"
+            f"Category: {category}\n"
+            f"Distance: {distance}\n"
+            f"Race Time: {race_time}"
+        )
+
+        # Clear fields after successful recording
         self.raceNumberLineedit.clear()
         self.fullNameLineEdit.clear()
         self.categoryLineEdit.clear()

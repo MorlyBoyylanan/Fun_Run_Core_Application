@@ -41,7 +41,6 @@ class RegistrationPage(QMainWindow):
 
         # Connect the buttons
         self.searchButton.clicked.connect(self.searchBtn)
-        self.cancelButton.clicked.connect(self.cancelBtn)
         self.registerButton.clicked.connect(self.addBtn)
         self.updateButton.clicked.connect(self.updateBtn)
         self.deleteButton.clicked.connect(self.deleteBtn)
@@ -90,10 +89,40 @@ class RegistrationPage(QMainWindow):
             address = self.addresstxt.text().strip()
             category = self.categorycomboBox.currentText()
             distance = self.distancecomboBox.currentText()
-            race_number = self.racenumbertxt.text().strip()
 
-            # Send data to the service
+            # Validate required fields before confirmation
+            if not name or not age or not email or not cpnumber or not address:
+                QMessageBox.warning(
+                    self,
+                    "Missing Information",
+                    "Please fill in all the required fields."
+                )
+                return
 
+            # Ask the user to confirm the information
+            confirmation = QMessageBox.question(
+                self,
+                "Confirm Registration",
+                f"Please check if the following information is correct:\n\n"
+                f"Full Name: {name}\n"
+                f"Age: {age}\n"
+                f"Sex: {sex}\n"
+                f"Birthdate: {birthdate}\n"
+                f"Email: {email}\n"
+                f"Contact Number: {cpnumber}\n"
+                f"Address: {address}\n"
+                f"Category: {category}\n"
+                f"Distance: {distance}\n\n"
+                f"Do you want to register this participant?",
+                QMessageBox.Yes | QMessageBox.No,
+                QMessageBox.No
+            )
+
+            # Stop if the user selects No
+            if confirmation != QMessageBox.Yes:
+                return
+
+            # Save the participant after confirmation
             participant = self.service.register_participant(
                 name,
                 age,
@@ -103,15 +132,21 @@ class RegistrationPage(QMainWindow):
                 cpnumber,
                 address,
                 category,
-                distance,
-                race_number
+                distance
             )
 
-            # Display participant in table
+            # Display the registered participant in the table
             self.displayParticipant(participant)
-            QMessageBox.information(self, "Registration Successful", "Participant registered successfully.")
 
-            # Clear input fields
+            # Show the generated race number
+            QMessageBox.information(
+                self,
+                "Registration Successful",
+                f"Participant registered successfully!\n\n"
+                f"Race Number: {participant.race_number}"
+            )
+
+            # Clear fields only after successful registration
             self.clearBtn()
 
         except ValueError as error:
@@ -122,7 +157,11 @@ class RegistrationPage(QMainWindow):
             )
 
         except Exception as error:
-            QMessageBox.critical(self,"Error", f"An error occurred:\n{error}")
+            QMessageBox.critical(
+                self,
+                "Error",
+                f"An error occurred:\n{error}"
+            )
 
     # Function to display a participant in the table
     def displayParticipant(self, participant):
@@ -293,12 +332,7 @@ class RegistrationPage(QMainWindow):
 
             return
 
-        confirm = QMessageBox.question(
-            self,
-            "Confirm Delete",
-            "Are you sure you want to delete this participant?",
-            QMessageBox.Yes | QMessageBox.No
-        )
+        confirm = QMessageBox.question(self, "Confirm Delete", "Are you sure you want to delete this participant?", QMessageBox.Yes | QMessageBox.No)
 
         if confirm == QMessageBox.Yes:
 
@@ -368,7 +402,4 @@ class RegistrationPage(QMainWindow):
         self.distancecomboBox.setCurrentIndex(0)
         self.racenumbertxt.clear()
 
-    # Function to cancel the registration
-
-    def cancelBtn(self):
-        self.clearBtn()
+    

@@ -730,13 +730,13 @@ QLineEdit:focus {
           <number>10</number>
          </property>
          <property name="topMargin">
-          <number>10</number>
+          <number>0</number>
          </property>
          <property name="rightMargin">
           <number>10</number>
          </property>
          <property name="bottomMargin">
-          <number>10</number>
+          <number>20</number>
          </property>
          <item>
           <layout class="QFormLayout" name="formLayout_5">
@@ -894,7 +894,7 @@ QComboBox QAbstractItemView {
 }</string>
              </property>
              <property name="text">
-              <string>Singlet Status:</string>
+              <string>Status:</string>
              </property>
             </widget>
            </item>
@@ -945,109 +945,27 @@ QComboBox QAbstractItemView {
              </property>
              <item>
               <property name="text">
-               <string>Not Purchased</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Purchased</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QFormLayout" name="formLayout_8">
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_21">
-             <property name="minimumSize">
-              <size>
-               <width>125</width>
-               <height>30</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>200</width>
-               <height>30</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Arial</family>
-               <pointsize>12</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QLabel {
-    background-color: transparent;
-    color: #123B78;
-    border: none;
-    font-family: Arial;
-    font-weight: bold;
-}</string>
-             </property>
-             <property name="text">
-              <string>Payment Status:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QComboBox" name="paymentStatusComboBox">
-             <property name="minimumSize">
-              <size>
-               <width>80</width>
-               <height>40</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>125</width>
-               <height>30</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Arial</family>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QComboBox {
-    background-color: #FFFFFF;
-    color: #123B78;
-    border: 2px solid #8AA9D6;
-    border-radius: 8px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-QComboBox:hover {
-    border: 2px solid #0647A8;
-}
-
-QComboBox:focus {
-    border: 2px solid #0647A8;
-}
-
-QComboBox QAbstractItemView {
-    background-color: #FFFFFF;
-    color: #123B78;
-    selection-background-color: #0647A8;
-    selection-color: #FFFFFF;
-}</string>
-             </property>
-             <item>
-              <property name="text">
                <string>Not Paid</string>
               </property>
              </item>
              <item>
               <property name="text">
                <string>Paid</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Reserved</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Released</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Cancelled</string>
               </property>
              </item>
             </widget>
@@ -1402,13 +1320,13 @@ QPushButton:pressed {
        <widget class="QTableWidget" name="singletTable">
         <property name="minimumSize">
          <size>
-          <width>861</width>
+          <width>1000</width>
           <height>381</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>900</width>
+          <width>1500</width>
           <height>700</height>
          </size>
         </property>
@@ -1544,20 +1462,7 @@ QTableCornerButton::section {
         </column>
         <column>
          <property name="text">
-          <string>Singlet Status</string>
-         </property>
-         <property name="font">
-          <font>
-           <family>Arial Black</family>
-           <pointsize>9</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Payment Status</string>
+          <string>Status</string>
          </property>
          <property name="font">
           <font>

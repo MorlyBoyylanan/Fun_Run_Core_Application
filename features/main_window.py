@@ -15,7 +15,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Fun Run Core Application")
 
         # Set the main window size
-        self.resize(1650, 1000)
+        self.resize(1900, 960)
 
         # Create the pages
         self.registrationpage = RegistrationPage()

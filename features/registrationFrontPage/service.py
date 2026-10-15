@@ -8,37 +8,48 @@ class ParticipantService:
 
     # Function to register a participant
 
-    def register_participant(self, name, age, sex, birthdate, email,
-                             cpnumber, address, category, distance, race_number):
-        # Validate input fields
+    # Function to register a participant
+    def register_participant(
+        self,
+        name,
+        age,
+        sex,
+        birthdate,
+        email,
+        cpnumber,
+        address,
+        category,
+        distance
+    ):
+        # Validate the required fields
         if not name or not age or not email \
-                or not cpnumber or not address \
-                or not race_number:
-
+                or not cpnumber or not address:
             raise ValueError(
-                "Please fill in all the fields."
+                "Please fill in all the required fields."
             )
 
-        # Check duplicate race number
+        # Generate a race number automatically
+        race_number = self.repository.generate_race_number()
 
-        if self.repository.race_number_exists(
+        # Create the participant, including the generated race number
+        participant = Participant(
+            name,
+            age,
+            sex,
+            birthdate,
+            email,
+            cpnumber,
+            address,
+            category,
+            distance,
             race_number
-        ):
+        )
 
-            raise ValueError(
-                "Race number already exists. "
-                "Please enter a unique race number."
-            )
-
-        # Create participant
-
-        participant = Participant(name, age, sex, birthdate, email, cpnumber, 
-                                  address, category, distance, race_number)
-
-        # Save participant to database
+        # Save the participant to the database
         self.repository.add(participant)
 
         return participant
+
 
     # Function to update a participant
     def update_participant(

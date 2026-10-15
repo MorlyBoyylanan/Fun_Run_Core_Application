@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>850</width>
-    <height>490</height>
+    <width>909</width>
+    <height>601</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -194,7 +194,7 @@
                      <property name="minimumSize">
                       <size>
                        <width>0</width>
-                       <height>30</height>
+                       <height>40</height>
                       </size>
                      </property>
                      <property name="font">
@@ -256,7 +256,7 @@ QLineEdit:focus {
                      <property name="minimumSize">
                       <size>
                        <width>30</width>
-                       <height>30</height>
+                       <height>40</height>
                       </size>
                      </property>
                      <property name="maximumSize">
@@ -324,7 +324,7 @@ QLineEdit:focus {
                      <property name="minimumSize">
                       <size>
                        <width>70</width>
-                       <height>30</height>
+                       <height>40</height>
                       </size>
                      </property>
                      <property name="font">
@@ -349,12 +349,12 @@ QLineEdit:focus {
                      </property>
                      <item>
                       <property name="text">
-                       <string>Women</string>
+                       <string>Female</string>
                       </property>
                      </item>
                      <item>
                       <property name="text">
-                       <string>Men</string>
+                       <string>Male</string>
                       </property>
                      </item>
                     </widget>
@@ -393,6 +393,12 @@ QLineEdit:focus {
                    </item>
                    <item row="0" column="1">
                     <widget class="QDateEdit" name="birthdateEdit">
+                     <property name="minimumSize">
+                      <size>
+                       <width>160</width>
+                       <height>40</height>
+                      </size>
+                     </property>
                      <property name="font">
                       <font>
                        <family>Arial</family>
@@ -461,8 +467,8 @@ QDateEdit::down-arrow {
                     <widget class="QLineEdit" name="emailtxt">
                      <property name="minimumSize">
                       <size>
-                       <width>200</width>
-                       <height>0</height>
+                       <width>250</width>
+                       <height>40</height>
                       </size>
                      </property>
                      <property name="font">
@@ -515,7 +521,7 @@ QLineEdit:focus {
 }</string>
                      </property>
                      <property name="text">
-                      <string>CP</string>
+                      <string>Contact Number</string>
                      </property>
                     </widget>
                    </item>
@@ -523,8 +529,8 @@ QLineEdit:focus {
                     <widget class="QLineEdit" name="cptxt">
                      <property name="minimumSize">
                       <size>
-                       <width>130</width>
-                       <height>30</height>
+                       <width>150</width>
+                       <height>40</height>
                       </size>
                      </property>
                      <property name="maximumSize">
@@ -594,7 +600,7 @@ QLineEdit:focus {
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>30</height>
+                     <height>40</height>
                     </size>
                    </property>
                    <property name="font">
@@ -658,7 +664,7 @@ QLineEdit:focus {
                      <property name="minimumSize">
                       <size>
                        <width>100</width>
-                       <height>30</height>
+                       <height>40</height>
                       </size>
                      </property>
                      <property name="font">
@@ -747,7 +753,7 @@ QComboBox QAbstractItemView {
                      <property name="minimumSize">
                       <size>
                        <width>30</width>
-                       <height>30</height>
+                       <height>40</height>
                       </size>
                      </property>
                      <property name="maximumSize">
@@ -846,13 +852,13 @@ QComboBox QAbstractItemView {
                     <widget class="QLineEdit" name="racenumbertxt">
                      <property name="minimumSize">
                       <size>
-                       <width>70</width>
-                       <height>30</height>
+                       <width>100</width>
+                       <height>40</height>
                       </size>
                      </property>
                      <property name="maximumSize">
                       <size>
-                       <width>100</width>
+                       <width>150</width>
                        <height>16777215</height>
                       </size>
                      </property>
@@ -879,6 +885,12 @@ QLineEdit:hover {
 QLineEdit:focus {
     border: 2px solid #0647A8;
 }</string>
+                     </property>
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Generated automatically</string>
                      </property>
                     </widget>
                    </item>
@@ -944,7 +956,7 @@ QPushButton:pressed {
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="cancelButton">
+                  <widget class="QPushButton" name="clearButton">
                    <property name="minimumSize">
                     <size>
                      <width>100</width>
@@ -961,9 +973,9 @@ QPushButton:pressed {
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QPushButton {
-    background-color: #6C757D;
-    color: #FFFFFF;
-    border: 2px solid #6C757D;
+    background-color: #FFFFFF;
+    color: #0647A8;
+    border: 2px solid #0647A8;
     border-radius: 10px;
     padding: 6px 15px;
     font-family: Arial;
@@ -971,16 +983,17 @@ QPushButton:pressed {
 }
 
 QPushButton:hover {
-    background-color: #5A6268;
-    border: 2px solid #5A6268;
+    background-color: #EAF2FF;
+    border: 2px solid #0B5CC7;
+    color: #0B5CC7;
 }
 
 QPushButton:pressed {
-    background-color: #495057;
+    background-color: #D6E6FF;
 }</string>
                    </property>
                    <property name="text">
-                    <string>Cancel</string>
+                    <string>Clear</string>
                    </property>
                   </widget>
                  </item>
@@ -1067,48 +1080,6 @@ QPushButton:pressed {
                    </property>
                    <property name="text">
                     <string>Delete</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QPushButton" name="clearButton">
-                   <property name="minimumSize">
-                    <size>
-                     <width>100</width>
-                     <height>50</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Arial</family>
-                     <pointsize>12</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">QPushButton {
-    background-color: #FFFFFF;
-    color: #0647A8;
-    border: 2px solid #0647A8;
-    border-radius: 10px;
-    padding: 6px 15px;
-    font-family: Arial;
-    font-weight: bold;
-}
-
-QPushButton:hover {
-    background-color: #EAF2FF;
-    border: 2px solid #0B5CC7;
-    color: #0B5CC7;
-}
-
-QPushButton:pressed {
-    background-color: #D6E6FF;
-}</string>
-                   </property>
-                   <property name="text">
-                    <string>Clear</string>
                    </property>
                   </widget>
                  </item>
@@ -1208,13 +1179,20 @@ QPushButton:pressed {
                    <height>30</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <family>Arial</family>
+                   <pointsize>12</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="styleSheet">
                   <string notr="true">QLabel {
     background-color: transparent;
     color: #123B78;
     border: none;
     font-family: Arial;
-    font-size: 14px;
     font-weight: bold;
 }
 </string>
@@ -1336,13 +1314,13 @@ QPushButton:pressed {
         </property>
         <property name="minimumSize">
          <size>
-          <width>830</width>
+          <width>1000</width>
           <height>100</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>1500</width>
+          <width>1800</width>
           <height>16777215</height>
          </size>
         </property>
@@ -1384,6 +1362,12 @@ QHeaderView::section {
         <property name="editTriggers">
          <set>QAbstractItemView::NoEditTriggers</set>
         </property>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>180</number>
+        </attribute>
         <column>
          <property name="text">
           <string>Race Number</string>
@@ -1421,7 +1405,7 @@ QHeaderView::section {
         </column>
         <column>
          <property name="text">
-          <string>CP#</string>
+          <string>Contact Number</string>
          </property>
         </column>
        </widget>
